@@ -1,1 +1,65 @@
+# IDE/Editor-specific files
+.idea/
+.vscode/
 .DS_Store
+
+# Compiled or build files
+*.pyc
+__pycache__/
+*.class
+*.jar
+node_modules/
+dist/
+build/
+
+# Dependency files
+requirements.txt
+package-lock.json
+yarn.lock
+Gemfile.lock
+composer.lock
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Credentials and sensitive information
+.env
+*.key
+*.pem
+config.ini
+secrets.json
+
+# Generated or user-specific files
+*.bak
+*.orig
+*.tmp
+.cache/
+.pytest_cache/
+.vscode/
+.git/ # Not `.gitignore`, but sometimes needed
+
+# IDE project files
+.project
+.classpath
+.settings/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+.Trashes
+
+# Editor or IDE-specific settings
+.editorconfig
+.vscode/settings.json
+
+# Generated documentation or reports
+doc/
+coverage/
+reports/
+
+# User-specific or project-specific files
+*.iml
+*.suo
+.project

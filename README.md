@@ -1,6 +1,6 @@
 ## TECHIN5 10 lab2_Web Scrapers_Wanling
 
-This is the assignment on practicing Accessing Web Resources with Python.
+This is the assignment about Accessing Web Resources with Python.
 
 **What are Included:**
 - Scrape the list page of Seattle events

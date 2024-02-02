@@ -31,7 +31,13 @@ jobs:
         run: |
           git config --local user.email "wyu31@github.com"
           git config --local user.name "Local Activities GitHub Action"
-          git pull --rebase  # Ensure the local branch is up-to-date with the remote branch
+          # Stash any unstaged changes
+          git stash push -m "Temporary stash before rebase"
+          # Ensure the local branch is up-to-date with the remote branch
+          git pull --rebase
+          # Apply the stashed changes
+          git stash pop
+          # Proceed with your database update commit
           git add -A
           git diff-index --quiet HEAD || git commit -m "Updated local activities database with new entries"
           git push

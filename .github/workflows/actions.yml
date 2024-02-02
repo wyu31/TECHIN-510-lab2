@@ -31,7 +31,8 @@ jobs:
         run: |
           git config --local user.email "wyu31@github.com"
           git config --local user.name "Local Activities GitHub Action"
-          git pull --rebase  # Ensure the local branch is up-to-date with the remote branch
+          # Ensure the local branch is up-to-date with the remote branch
+          git pull --rebase
           git add -A
-          git diff-index --quiet HEAD || git commit -m "Updated local activities database with new entries"
-          git push
+          git diff-index --quiet HEAD || (git commit -m "Updated local activities database with new entries" && (git push || (echo "Push failed, retrying..." && git pull --rebase && git push)))
+  
